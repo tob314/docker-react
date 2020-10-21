@@ -3,9 +3,8 @@ sudo: required
 services:
   - docker
 
+before_install:
+  - docker build -t tsobrien-stl/docker-react -f Dockerfile.dev .
 
-  before_install:
-    - docker build -t tsobrien-stl/docker-react -f Dockerfile.dev .
-
-  script:
-    - docker run -e CI=true tsobrien-stl/docker-react npm run test
+script:
+  - docker run -e CI=true tsobrien-stl/docker-react npm run test
