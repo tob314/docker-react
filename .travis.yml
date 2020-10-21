@@ -20,4 +20,4 @@ deploy:
     branch: master
   access_key_id: $aws-access-key
   secret_access_key:
-    secure: "$aws-secret-key"
+    secure: $aws-secret-key
